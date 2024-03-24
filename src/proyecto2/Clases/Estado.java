@@ -11,30 +11,41 @@ import proyecto2.Clases.Persona;
  * @author Giuseppe Vaccaro
  */
 public class Estado extends Persona {
-    private int numHabitacion;
-    private String phone;
+    private String numHabitacion;
+    private String celular;
 
-    public Estado(String name, String lastName, String correo, String sex, String fechaLlegada) {
-        super(name, lastName, correo, sex, fechaLlegada);
+    public Estado(String numHabitacion, String ci, String nombre, String apellido, String correo, String genero, String celular, String fechaLlegada) {
+        super(ci, nombre, apellido, correo, genero, fechaLlegada);
         this.numHabitacion = numHabitacion;
-        this.phone = phone;
+        this.celular = celular;
+    }
+    
+    public Estado(String numHabitacion, String nombre, String apellido, String correo, String genero, String celular, String fechaLlegada) {
+        super(nombre, apellido, correo, genero, fechaLlegada);
+        this.numHabitacion = numHabitacion;
+        this.celular = celular;
     }
 
-    public int getNumHabitacion() {
+    
+
+    public String getNumHabitacion() {
         return numHabitacion;
     }
 
-    public void setNumHabitacion(int numHabitacion) {
+    public void setNumHabitacion(String numHabitacion) {
         this.numHabitacion = numHabitacion;
     }
 
-    public String getPhone() {
-        return phone;
+    public String getCelular() {
+        return celular;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setCelular(String celular) {
+        this.celular = celular;
     }
+    
+
+   
     
     
     

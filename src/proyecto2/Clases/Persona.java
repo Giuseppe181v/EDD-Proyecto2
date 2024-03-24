@@ -9,34 +9,53 @@ package proyecto2.Clases;
  * @author Giuseppe Vaccaro
  */
 public class Persona {
-    private String name; 
-    private String lastName;
+    private String ci;
+    private String nombre; 
+    private String apellido;
     private String correo;
-    private String sex;
+    private String genero;
     private String fechaLlegada;
 
-    public Persona(String name, String lastName, String correo, String sex, String fechaLlegada) {
-        this.name = name;
-        this.lastName = lastName;
+    public Persona(String ci, String nombre, String apellido, String correo, String genero, String fechaLlegada) {
+        this.ci = ci;
+        this.nombre = nombre;
+        this.apellido = apellido;
         this.correo = correo;
-        this.sex = sex;
+        this.genero = genero;
+        this.fechaLlegada = fechaLlegada;
+    }
+    
+    public Persona(String nombre, String apellido, String correo, String genero, String fechaLlegada) {
+        this.ci = "";
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.correo = correo;
+        this.genero = genero;
         this.fechaLlegada = fechaLlegada;
     }
 
-    public String getName() {
-        return name;
+    public String getCi() {
+        return ci;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setCi(String ci) {
+        this.ci = ci;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
     }
 
     public String getCorreo() {
@@ -47,12 +66,12 @@ public class Persona {
         this.correo = correo;
     }
 
-    public String getSex() {
-        return sex;
+    public String getGenero() {
+        return genero;
     }
 
-    public void setSex(String sex) {
-        this.sex = sex;
+    public void setGenero(String genero) {
+        this.genero = genero;
     }
 
     public String getFechaLlegada() {
@@ -62,6 +81,8 @@ public class Persona {
     public void setFechaLlegada(String fechaLlegada) {
         this.fechaLlegada = fechaLlegada;
     }
+
+    
     
     
 }

@@ -8,26 +8,18 @@ package proyecto2.Clases;
  *
  * @author Giuseppe Vaccaro
  */
-public class Reserva extends Persona {
-    private int id;
+public class Reserva extends Persona {    
     private String tipoHabitacion;
-    private String phone;
+    private String celular;
     private String fechaSalida;
     
-    public Reserva(String name, String lastName, String correo, String sex, String fechaLlegada) {
-        super(name, lastName, correo, sex, fechaLlegada);
-        this.id = id;
-        this.fechaSalida = fechaSalida;
-        this.phone = phone;
+    // String ci, nombre, apellido, email, genero, tipoHabitacion, celular, fechaLlegada, fechaSalida;
+
+    public Reserva(String ci, String nombre, String apellido, String correo, String genero, String tipoHabitacion, String celular, String fechaLlegada, String fechaSalida) {
+        super(ci, nombre, apellido, correo, genero, fechaLlegada);        
         this.tipoHabitacion = tipoHabitacion;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
+        this.celular = celular;
+        this.fechaSalida = fechaSalida;
     }
 
     public String getTipoHabitacion() {
@@ -38,13 +30,13 @@ public class Reserva extends Persona {
         this.tipoHabitacion = tipoHabitacion;
     }
 
-    public String getPhone() {
-        return phone;
+    public String getCelular() {
+        return celular;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
+    public void setCelular(String celular) {
+        this.celular = celular;
+    }    
 
     public String getFechaSalida() {
         return fechaSalida;

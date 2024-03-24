@@ -4,9 +4,16 @@
  */
 package proyecto2;
 
+import Interfaces.Menu;
 import proyecto2.EDD.TablaHash;
 import proyecto2.Clases.Cliente;
+import proyecto2.Clases.Estado;
+import proyecto2.Clases.Historico;
+import proyecto2.Clases.Reserva;
+import proyecto2.EDD.ABB;
+import proyecto2.EDD.Excel;
 import proyecto2.EDD.Lista;
+import proyecto2.EDD.NodoABB;
 
 /**
  *
@@ -19,9 +26,19 @@ public class Proyecto2 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Lista lista = new Lista(1, 2, 3, 4);
+        Excel excel = new Excel();
+        TablaHash tablaEstado = excel.obtenerEstado();
+        ABB arbolReserva = excel.obtenerReserva();
+        ABB arbolHistorico = excel.obtenerHistorico();
+        Menu menu = new Menu(tablaEstado, arbolReserva, arbolHistorico);
+        menu.setVisible(true);
         
-        System.out.println(lista.obtener(2));
+        
+        
+        
+        
+        
+        
         
         
         

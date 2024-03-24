@@ -10,15 +10,27 @@ import proyecto2.Clases.Persona;
  *
  * @author Giuseppe Vaccaro
  */
-public class Historico extends Persona {
-    private int id;
-    private int nroHabitacion;
+public class Historico extends Persona {    
+    private String numHabitacion;
 
-    public Historico(String name, String lastName, String correo, String sex, String fechaLlegada) {
-        super(name, lastName, correo, sex, fechaLlegada);
-        this.id = id;
-        this.nroHabitacion = nroHabitacion;
+    public Historico(String ci, String nombre, String apellido, String correo, String genero, String fechaLlegada, String numHabitacion) {
+        super(ci, nombre, apellido, correo, genero, fechaLlegada);
+        this.numHabitacion = numHabitacion;
     }
+
+    public String getNumHabitacion() {
+        return numHabitacion;
+    }
+
+    public void setNumHabitacion(String numHabitacion) {
+        this.numHabitacion = numHabitacion;
+    }
+    
+    
+    
+    
+
+    
     
     
 }

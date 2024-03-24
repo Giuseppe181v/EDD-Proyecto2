@@ -92,7 +92,7 @@ public class TablaHash {
      * @param estado 
      */
     public void insertar(Estado estado){
-        int indice = codigoHash(estado.getName(), estado.getLastName());
+        int indice = codigoHash(estado.getNombre(), estado.getApellido());
         
         tabla[indice].agregarFinal(estado);        
     }
@@ -111,7 +111,7 @@ public class TablaHash {
             for (int i = 0; i < lista.getNumElementos(); i++) {
                 Estado aux = (Estado) lista.obtener(i);
 
-                if(aux.getName().equals(nombre) && aux.getLastName().equals(apellido)){
+                if(aux.getNombre().equals(nombre) && aux.getApellido().equals(apellido)){
                     return aux;
                 }
             }            
@@ -135,7 +135,7 @@ public class TablaHash {
             for (int i = 0; i < lista.getNumElementos(); i++) {
                 Estado aux = (Estado) lista.obtener(i);
 
-                if(aux.getName().equals(nombre) && aux.getLastName().equals(apellido)){
+                if(aux.getNombre().equals(nombre) && aux.getApellido().equals(apellido)){
                     lista.eliminar(i);
                 }
             } 
