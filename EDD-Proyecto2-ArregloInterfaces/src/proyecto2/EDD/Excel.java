@@ -25,10 +25,19 @@ import proyecto2.Clases.Reserva;
 /**
  *
  * @author Giuseppe Vaccaro
+ * 
+ * *Clase para leer y procesar datos desde un archivo de Excel
  */
 public class Excel {
     
-    
+    /**
+     * Lee los datos de una hoja específica del archivo de Excel.
+     * 
+     * @param hoja El índice de la hoja que se desea leer.
+     * @return Una lista de listas que representa los datos de la hoja.
+     *         Cada lista interna representa una fila, y cada elemento de
+     *         la lista interna representa una celda de esa fila.
+     */
     public Lista<Lista> leerHoja(int hoja){
         try{
             FileInputStream fileExcel = new FileInputStream("Booking_hotel.xlsx");                         
@@ -68,7 +77,13 @@ public class Excel {
         return null;
     }
     
-    
+    /**
+     * Obtiene los datos de la hoja correspondiente al estado de las reservas
+     * 
+     * @return tabla hash que contiene la información de las reservas
+     *  Cada reserva se almacena en la tabla utilizando el número de
+     *   habitación como clave
+     */
     public TablaHash obtenerEstado(){
         Lista<Lista> hojaEstado = leerHoja(2);
         
@@ -103,7 +118,12 @@ public class Excel {
     }
     
     
-    
+    /**
+     * Obtiene los datos de la hoja correspondiente a las reservas activas
+     * 
+     * @return Un árbol que contiene la información
+     *         de las reservas activas.
+     */
     public ABB obtenerReserva(){
         Lista<Lista> hojaReserva = leerHoja(0);
         
@@ -131,7 +151,10 @@ public class Excel {
         return arbolReserva;
     }
     
-    
+    /**
+     * Obtiene los datos de la hoja correspondiente al historial de reservas
+     * @return árbol que contiene la información del historial de reservas
+     */
     public ABB obtenerHistorico(){
         Lista<Lista> hojaReserva = leerHoja(3);
         
